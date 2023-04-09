@@ -8,7 +8,7 @@ function Home() {
     <section className="space-y-5">
       <NavBar title="Love" />
 
-      <Banner imgSrc="https://i.imgur.com/dxdaCbi.jpg" />
+      <Banner imgSrc="https://i.imgur.com/zcr8Sb9.jpg" />
       <Intro />
     </section>
   );
