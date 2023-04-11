@@ -33,7 +33,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        className="w-screen h-full overflow-y-hidden p-5 font-montserrat"
+        className="bg-gray-50 w-screen lg:max-w-xl lg:mx-auto lg:h-screen h-full p-5 font-montserrat"
       >
         <AnimatePresence>
           <RouterProvider router={router} />
