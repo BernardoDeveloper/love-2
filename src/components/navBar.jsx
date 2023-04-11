@@ -26,7 +26,7 @@ function NavBar({ title }) {
           initial={{ opacity: 1, y: '-20%' }}
           animate={{ opacity: 1, y: '0%' }}
           exit={{ opacity: 0 }}
-          className="h-1/3 w-full absolute bottom-0 left-0 bg-white text-white font-semibold text-xl"
+          className="h-1/3 w-full fixed bottom-0 left-0 bg-white text-white font-semibold text-xl"
         >
           <ul className="bg-black/90 w-full h-full flex items-center justify-center flex-col space-y-3">
             <li>
