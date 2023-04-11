@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function NavBar({ title }) {
   let [open, setOpen] = useState(false);
@@ -6,9 +7,9 @@ function NavBar({ title }) {
   return (
     <>
       <nav className="flex itens-center justify-between">
-        <a href="/" className="font-bold font-montserrat text-2xl">
+        <Link to="/" className="font-bold font-montserrat text-2xl">
           {title}
-        </a>
+        </Link>
 
         <button
           className="font-montserrat font-semibold py-1 px-5 border-2 border-black/20 rounded-full hover:border-black/40 transition-all duration-200"
@@ -34,13 +35,13 @@ function NavBar({ title }) {
               </button>
             </li>
             <li>
-              <a href="/">inicio</a>
+              <Link to="/">inicio</Link>
             </li>
             <li>
-              <a href="/we">casal</a>
+              <Link to="/we">casal</Link>
             </li>
             <li>
-              <a href="/all">familia</a>
+              <Link to="/all">familia</Link>
             </li>
           </ul>
         </div>
