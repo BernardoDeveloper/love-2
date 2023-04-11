@@ -1,5 +1,4 @@
-import { BannerText } from '../components/bannerText';
-import { NavBar } from '../components/navBar';
+import { Layout } from '../handlers/layout';
 
 function Casal() {
   const images = [
@@ -54,30 +53,9 @@ function Casal() {
   ];
 
   return (
-    <section className="space-y-5 w-full">
-      <NavBar title="Casal" />
-
-      <BannerText imgSrc="https://i.imgur.com/od7mDco.jpg" />
-
-      <p className="font-karla text-xl font-medium pb-10">
-        Um cantinho para o casal mais lindo desse universo.
-      </p>
-
-      <div className="columns-2 gap-3 w-full mx-auto space-y-3 pb-28">
-        {images.map((image, index) => (
-          <div
-            className="bg-gray-200 break-inside-avoid rounded-xl"
-            key={index}
-          >
-            <img
-              src={'https://i.imgur.com/' + image.link}
-              alt="casal image"
-              className="rounded-xl"
-            />
-          </div>
-        ))}
-      </div>
-    </section>
+    <Layout title="Casal" img="od7mDco.jpg" imagesArray={images}>
+      Um cantinho para o casal mais lindo desse universo.
+    </Layout>
   );
 }
 

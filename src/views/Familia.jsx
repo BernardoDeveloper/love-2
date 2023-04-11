@@ -1,5 +1,4 @@
-import { BannerText } from '../components/bannerText';
-import { NavBar } from '../components/navBar';
+import { Layout } from '../handlers/layout';
 
 function Familia() {
   const images = [
@@ -35,30 +34,9 @@ function Familia() {
   ];
 
   return (
-    <section className="space-y-5 w-full">
-      <NavBar title="Familia" />
-
-      <BannerText imgSrc="https://i.imgur.com/jUOdNim.jpg" />
-
-      <p className="font-karla text-xl font-medium pb-10">
-        Uma familia linda e maravilhosa muito abençoada por Deus.
-      </p>
-
-      <div className="columns-2 gap-3 w-full mx-auto space-y-3 pb-28">
-        {images.map((image, index) => (
-          <div
-            className="bg-gray-200 break-inside-avoid rounded-xl"
-            key={index}
-          >
-            <img
-              src={'https://i.imgur.com/' + image.link}
-              alt="family image"
-              className="rounded-xl"
-            />
-          </div>
-        ))}
-      </div>
-    </section>
+    <Layout title="Familia" img="jUOdNim.jpg" imagesArray={images}>
+      Uma familia linda e maravilhosa muito abençoada por Deus.
+    </Layout>
   );
 }
 

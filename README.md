@@ -6,3 +6,5 @@ I create this personal website to me and my girlfriend, and to put my knowlodge 
 
 - [ ] Refactor;
 - [ ] Add animations with FramerMotion;
+- [ ] Imgur api;
+- [ ] Upload images by website;
