@@ -23,7 +23,7 @@ function NavBar({ title }) {
       {open && (
         <motion.div
           key="modal"
-          initial={{ opacity: 1, y: '-10%' }}
+          initial={{ opacity: 1, y: '-20%' }}
           animate={{ opacity: 1, y: '0%' }}
           exit={{ opacity: 0 }}
           className="h-1/3 w-full absolute bottom-0 left-0 bg-white text-white font-semibold text-xl"

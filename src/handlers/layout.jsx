@@ -1,9 +1,17 @@
 import { BannerText } from '../components/bannerText';
 import { NavBar } from '../components/navBar';
 
+import { motion } from 'framer-motion';
+
 function Layout({ title, img, imagesArray, children }) {
   return (
-    <section className="space-y-5 w-full">
+    <motion.section
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.5 }}
+      className="space-y-5 w-full"
+    >
       <NavBar title={title} />
 
       <BannerText imgSrc={`https://i.imgur.com/${img}`} />
@@ -24,7 +32,7 @@ function Layout({ title, img, imagesArray, children }) {
           </div>
         ))}
       </div>
-    </section>
+    </motion.section>
   );
 }
 
