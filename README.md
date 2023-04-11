@@ -4,7 +4,8 @@ I create this personal website to me and my girlfriend, and to put my knowlodge 
 
 ### Things TODO:
 
-- [ ] Refactor;
+- [x] Refactor;
 - [ ] Add animations with FramerMotion;
+- [ ] Page to write beautiful text;
 - [ ] Imgur api;
 - [ ] Upload images by website;
