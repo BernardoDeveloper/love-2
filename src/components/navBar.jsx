@@ -2,8 +2,16 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 
+import { click } from '../handlers/animation';
+
 function NavBar({ title }) {
   let [open, setOpen] = useState(false);
+
+  const links = [
+    { name: 'inicio', to: '/', id: 1 },
+    { name: 'casal', to: '/we', id: 2 },
+    { name: 'familia', to: '/all', id: 3 },
+  ];
 
   return (
     <AnimatePresence>
@@ -20,40 +28,36 @@ function NavBar({ title }) {
         </button>
       </nav>
 
-      {open && (
-        <motion.div
-          key="modal"
-          initial={{ opacity: 1, y: '-20%' }}
-          animate={{ opacity: 1, y: '0%' }}
-          exit={{ opacity: 0 }}
-          className="h-1/3 w-full fixed bottom-0 left-0 bg-white text-white font-semibold text-xl"
-        >
-          <ul className="bg-black/90 w-full h-full flex items-center justify-center flex-col space-y-3">
-            <li>
-              <motion.button
-                whileTap={{ scale: 0.9 }}
-                onClick={() => setOpen(!open)}
-                className="w-6 h-6 absolute top-5 right-5"
-              >
-                <img
-                  className="fill-white"
-                  src="/close-button-svgrepo-com.svg"
-                  alt="close button"
-                />
-              </motion.button>
-            </li>
-            <li>
-              <Link to="/">inicio</Link>
-            </li>
-            <li>
-              <Link to="/we">casal</Link>
-            </li>
-            <li>
-              <Link to="/all">familia</Link>
-            </li>
-          </ul>
-        </motion.div>
-      )}
+      <motion.div
+        layout
+        className={`w-full fixed bottom-0 left-0 bg-white text-white font-semibold text-xl ${
+          open ? 'h-1/3' : 'h-0'
+        }`}
+      >
+        <ul className="bg-black/90 w-full h-full flex items-center justify-center flex-col space-y-3">
+          <li>
+            <motion.button
+              whileTap={{ scale: click.scale }}
+              onClick={() => setOpen(!open)}
+              className="w-6 h-6 absolute top-5 right-5"
+            >
+              <img
+                className="fill-white"
+                src="/close-button-svgrepo-com.svg"
+                alt="close button"
+              />
+            </motion.button>
+          </li>
+
+          {links.map(({ name, to, id }) => (
+            <motion.li whileTap={{ scale: click.scale }}>
+              <Link key={id} to={to}>
+                {name}
+              </Link>
+            </motion.li>
+          ))}
+        </ul>
+      </motion.div>
     </AnimatePresence>
   );
 }

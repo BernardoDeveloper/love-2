@@ -1,10 +1,14 @@
-function Banner({ imgSrc }) {
+function Banner({ imgSrc, profile }) {
   return (
-    <img
-      src={imgSrc}
-      alt="banner image"
-      className="rounded-3xl h-96 w-full object-cover object-top"
-    />
+    <div className="space-y-3">
+      <img
+        src={imgSrc}
+        alt="banner image"
+        className={`rounded-3xl w-full object-cover ${
+          profile ? 'h-96 object-top' : 'h-64'
+        }`}
+      />
+    </div>
   );
 }
 

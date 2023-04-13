@@ -29,12 +29,7 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <LazyLoad once>
-      <section
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        className="bg-gray-50 w-screen lg:max-w-xl lg:mx-auto lg:h-screen h-full p-5 font-montserrat"
-      >
+      <section className="bg-gray-50 w-screen lg:max-w-xl lg:mx-auto lg:h-screen h-full p-5 font-montserrat">
         <AnimatePresence>
           <RouterProvider router={router} />
         </AnimatePresence>

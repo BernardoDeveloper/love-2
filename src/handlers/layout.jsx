@@ -1,20 +1,21 @@
-import { BannerText } from '../components/bannerText';
+import { Banner } from '../components/banner';
 import { NavBar } from '../components/navBar';
 
 import { motion } from 'framer-motion';
+import { transition } from './animation';
 
 function Layout({ title, img, imagesArray, children }) {
   return (
     <motion.section
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.5 }}
+      initial={{ opacity: transition.initial }}
+      animate={{ opacity: transition.animate }}
+      exit={{ opacity: transition.exit }}
+      transition={{ duration: transition.transition }}
       className="space-y-5 w-full"
     >
       <NavBar title={title} />
 
-      <BannerText imgSrc={`https://i.imgur.com/${img}`} />
+      <Banner imgSrc={`https://i.imgur.com/${img}`} />
 
       <p className="font-karla text-xl font-medium pb-10">{children}</p>
 
