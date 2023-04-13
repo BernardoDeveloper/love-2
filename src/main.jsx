@@ -10,6 +10,7 @@ import { Home } from './views/Home';
 import { Casal } from './views/Casal';
 import { Familia } from './views/Familia';
 import { AnimatePresence } from 'framer-motion';
+import { Love } from './views/Love';
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
   {
     path: '/all',
     element: <Familia />,
+  },
+  {
+    path: '/love',
+    element: <Love />,
   },
 ]);
 

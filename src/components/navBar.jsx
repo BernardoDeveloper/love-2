@@ -11,6 +11,7 @@ function NavBar({ title }) {
     { name: 'inicio', to: '/', id: 1 },
     { name: 'casal', to: '/we', id: 2 },
     { name: 'familia', to: '/all', id: 3 },
+    { name: 'love', to: '/love', id: 4 },
   ];
 
   return (
@@ -38,7 +39,7 @@ function NavBar({ title }) {
           <li>
             <motion.button
               whileTap={{ scale: click.scale }}
-              onClick={() => setOpen(!open)}
+              onClick={() => setOpen(false)}
               className="w-6 h-6 absolute top-5 right-5"
             >
               <img
