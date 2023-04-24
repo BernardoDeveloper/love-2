@@ -6,6 +6,9 @@ I create this personal website to me and my girlfriend, and to put my knowlodge 
 
 - [x] Refactor;
 - [x] Add animations with FramerMotion;
-- [ ] Page to write beautiful text;
-- [ ] Imgur api;
-- [ ] Upload images by website;
+- [x] Page to write beautiful text;
+- [ ] Upload images by website with ImgurAPI;
+- [ ] Click outside navbar and close;
+- [ ] Authentication system;
+- [ ] Dark and white colorscheme;
+- [ ] Unit test;

@@ -11,6 +11,7 @@ import { Casal } from './views/Casal';
 import { Familia } from './views/Familia';
 import { AnimatePresence } from 'framer-motion';
 import { Love } from './views/Love';
+import { Upload } from './views/Upload';
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
   {
     path: '/love',
     element: <Love />,
+  },
+  {
+    path: '/upload',
+    element: <Upload />,
   },
 ]);
 
