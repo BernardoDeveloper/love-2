@@ -5,7 +5,10 @@ function Intro() {
     const loveDate = new Date('September 24, 2022');
     const now = new Date();
 
-    return loveDate.getMonth() + 1 - now.getMonth();
+    const monthDiff = now.getMonth() - loveDate.getMonth();
+    const yearDiff = now.getYear() - loveDate.getYear();
+
+    return monthDiff + yearDiff * 12;
   };
 
   return (
