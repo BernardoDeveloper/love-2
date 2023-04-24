@@ -13,6 +13,9 @@ import { AnimatePresence } from 'framer-motion';
 import { Love } from './views/Love';
 import { Upload } from './views/Upload';
 
+import { Document } from 'react-pdf';
+import { card } from '../card.pdf';
+
 const router = createBrowserRouter([
   {
     path: '/',
@@ -33,6 +36,14 @@ const router = createBrowserRouter([
   {
     path: '/upload',
     element: <Upload />,
+  },
+  {
+    path: '/card',
+    element: (
+      <div>
+        <Document file={card} />
+      </div>
+    ),
   },
 ]);
 
