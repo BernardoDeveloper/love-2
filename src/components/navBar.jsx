@@ -50,11 +50,9 @@ function NavBar({ title }) {
             </motion.button>
           </li>
 
-          {links.map(({ name, to, id }) => (
-            <motion.li whileTap={{ scale: click.scale }}>
-              <Link key={id} to={to}>
-                {name}
-              </Link>
+          {links.map(({ name, to }, index) => (
+            <motion.li whileTap={{ scale: click.scale }} key={index}>
+              <Link to={to}>{name}</Link>
             </motion.li>
           ))}
         </ul>

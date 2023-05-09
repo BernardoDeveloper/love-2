@@ -1,16 +1,12 @@
 import { ButtonLink } from '../handlers/buttonLink';
 
+const months = () => {
+  return Math.floor(
+    (new Date() - new Date('September 24, 2022')) / 1000 / 60 / 60 / 24 / 30
+  );
+};
+
 function Intro() {
-  const months = () => {
-    const loveDate = new Date('September 24, 2022');
-    const now = new Date();
-
-    const monthDiff = now.getMonth() - loveDate.getMonth();
-    const yearDiff = now.getYear() - loveDate.getYear();
-
-    return monthDiff + yearDiff * 12;
-  };
-
   return (
     <section className="flex flex-col justify-between items-center space-y-10">
       <div className="space-y-3">
