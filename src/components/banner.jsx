@@ -4,9 +4,8 @@ function Banner({ imgSrc, profile }) {
       <img
         src={imgSrc}
         alt="banner image"
-        className={`rounded-3xl w-full object-cover ${
-          profile ? 'h-96 object-top' : 'h-64'
-        }`}
+        className={`rounded-3xl w-full object-cover ${profile ? 'h-96 object-top' : 'h-64'
+          }`}
       />
     </div>
   );

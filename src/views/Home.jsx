@@ -16,7 +16,7 @@ function Home() {
     >
       <NavBar title="Love" />
 
-      <Banner imgSrc="https://i.imgur.com/zcr8Sb9.jpg" profile />
+      <Banner imgSrc="https://i.imgur.com/AkKQ0IX.jpg" profile />
       <Intro />
     </motion.section>
   );
